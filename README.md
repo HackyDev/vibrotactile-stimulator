@@ -6,6 +6,8 @@ This device does not have a specific designated use, so it can be used for any p
 
 Please note that this device was built by a hobbyist for personal use only and has not been tested to meet any safety standards or requirements. The code running on the controller may also contain bugs.
 
+The repository will be updated with more information in the future. If you find it helpful for your own projects, please consider starring the repository as it can assist me in attracting potential employers. You can contact me at hackydev@gmail.com
+
 ![vibrotactile stimulation device](/images/device.jpg?raw=true)
 
 ## Settings
