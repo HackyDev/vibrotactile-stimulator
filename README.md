@@ -34,7 +34,7 @@ I initially utilized BJT transistors, but they resulted in the NodeMCU being una
 
 ## Vibration module
 
-The vibration module consists of 3D printed parts, a small 10x10x1 permanent neodymium magnet, and a magnetic coil extracted from a power relay. Assembly can be quite time-consuming. For future versions, I would consider using an audio exciter such as [this one](ehttps://www.tectonicaudiolabs.com/product/teax09c005-8/)
+The vibration module consists of 3D printed parts, a small 10x10x1 permanent neodymium magnet, and a magnetic coil extracted from a power relay. Assembly can be quite time-consuming. For future versions, I would consider using an audio exciter such as [this one](https://www.tectonicaudiolabs.com/product/teax09c005-8/)
 
 ![vibration module concept](/images/module-concept.jpg?raw=true)
 
