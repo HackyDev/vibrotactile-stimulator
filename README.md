@@ -14,7 +14,7 @@ The repository will be updated with more information in the future. If you find 
 
 ## Settings
 
-The device generates a WIFI network named "vtstim". Upon connecting to this network, you can access the device's settings page by entering "192.168.1.1" in your browser's address bar. From there, you can make various adjustments and update the device in real-time.
+The device generates a WIFI network named "vtstim". The default password is 12345678. Upon connecting to this network, you can access the device's settings page by entering "192.168.1.1" in your browser's address bar. From there, you can make various adjustments and update the device in real-time.
 
 ![vibrotactile stimulation settings form](/images/settings-form.jpg?raw=true)
 
