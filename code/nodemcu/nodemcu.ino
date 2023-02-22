@@ -215,8 +215,13 @@ class App {
         "PAUSE"
     };
     void applyUserSettings (UserSettings userSettings) {
-      _pulseOnDurationUs = 1000000 / (userSettings.vibrationFrequencyHz * 2);
-      _pulseOffDurationUs = 1000000 / (userSettings.vibrationFrequencyHz * 2);
+      if (userSettings.vibrationFrequencyHz > 0) {
+        _pulseOnDurationUs = 1000000 / (userSettings.vibrationFrequencyHz * 2);
+        _pulseOffDurationUs = 1000000 / (userSettings.vibrationFrequencyHz * 2);
+      } else {
+        _pulseOnDurationUs = 0;
+        _pulseOffDurationUs = 0;
+      }
     }
     unsigned long getPauseDuration () {
       return (_userSettings.pauseDurationMs * 1000) + _currentJitterValueMu;
