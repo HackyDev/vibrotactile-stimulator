@@ -459,7 +459,7 @@ String getUpdateUserSettingsFormHtml (UserSettings userSettings) {
   ptr += "<style>";
   ptr += "body * { margin: 0.3rem; min-width: 100px; }";
   ptr += "body { display: flex; flex-wrap: wrap;  justify-content: center; align-items: flex-start; font-family: Tahoma;}";
-  ptr += "form { display: flex; max-width: 500px; height: auto; flex-direction: column; background: whitesmoke; border: 1px solid black; white-space: nowrap;}";
+  ptr += "form { display: flex; width:100%; max-width: 500px; height: auto; flex-direction: column; background: whitesmoke; border: 1px solid black; white-space: nowrap;}";
   ptr += "form > div {display: flex; justify-content: center; flex-wrap: wrap;}";
   ptr += "form > div > *, form select { width: 200px; box-sizing: border-box; }";
   ptr += "#info-img { width: 100%; height: auto; max-width: 500px; background-color: whitesmoke; border: 1px solid black; }";
