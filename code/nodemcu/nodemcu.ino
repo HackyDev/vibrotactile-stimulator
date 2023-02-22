@@ -339,7 +339,6 @@ class App {
       _userSettings = _userSettingsStorage.get();
       _userSettingsStorage.printUserSettings(_userSettings);
       applyUserSettings(_userSettings);
-      
       setJitterValue();
       initPins();
     }
