@@ -29,6 +29,9 @@ The system is composed of a NodeMCU unit, 8 220 Ohm resistors, 8 DIY vibrotactil
 I initially utilized BJT transistors, but they resulted in the NodeMCU being unable to boot up. This was due to these transistors grounding certain controller pins, which prevents the NodeMCU from starting up. To address this issue, MOSFET transistors are required.
 
 ![vibration module concept](/images/schematics.jpg?raw=true)
+
+I haven't included *.stl files for the controller cover because it's unlikely that they will fit your specific controller hardware. However, I have provided a Blender file, so you can make edits and customize it according to your requirements.
+
 ![vibration stimulator controller open](/images/controller-open.jpg?raw=true)
 ![vibration stimulator controller top](/images/controller-top.jpg?raw=true)
 
@@ -44,6 +47,10 @@ The vibration module consists of 3D printed parts, a small 10x10x1 permanent neo
 
 ![vibration module apart](/images/module-apart.jpg?raw=true)
 
+When you print a spring, the printer will pause in the middle of the print to allow you to insert the magnet into the designated hole. Once you have done this, you can resume printing, and the magnet will be securely held inside the spring, eliminating the need for any gluing
+
 ![vibration module spring with magnet](/images/spring-in-print.jpg?raw=true)
+
+The latch on top of the finger module is designed for relatively small fingers. You may need to adjust its height in the provided Blender file. Alternatively, you can place a shim below this part to achieve the desired fit
 
 ![vibration module](/images/module.jpg?raw=true)
