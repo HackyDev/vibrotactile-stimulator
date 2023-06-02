@@ -22,7 +22,7 @@ The device generates a WIFI network named "vtstim". The default password is 1234
 
 ## Controller
 
-The controller utilizes a [NodeMCU](https://www.amazon.com/OLatus-OL-nodeMCU-CH340-Wireless-Internet-development/dp/B07BM58B9K), which is compatible with Arduino and allows for the reuse of code in your Arduino projects with some modifications.
+The controller utilizes a [NodeMCU](https://www.amazon.com/OLatus-OL-nodeMCU-CH340-Wireless-Internet-development/dp/B07BM58B9K), which is compatible with Arduino and allows for the reuse of code in your Arduino projects with some modifications. The board in Arduino IDE is [NodeMCU 1.0 (ESP-12E Module)](https://docs.platformio.org/en/stable/boards/espressif8266/nodemcuv2.html).
 
 The system is composed of a NodeMCU unit, 8 220 Ohm resistors, 8 DIY vibrotactile modules, 8 1N4007 diodes, and 8 IRF1406 MOSFET transistors, as shown in the schematics below.
 
