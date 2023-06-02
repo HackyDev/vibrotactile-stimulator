@@ -40,19 +40,25 @@ class RandomProvider {
   private:
     int _sequencePosition = 0;
     long _sequenceStorage[3] = { 0, 0, 0 };
+    long _previousRand = 0;
+    long _currentRand = 0;
 
   public:
     long getRandomNumber() {
-      long rand = generateUniqueRandom();
-      _sequenceStorage[_sequencePosition] = rand;
-      
+      _previousRand = _currentRand; 
+      _currentRand = generateUniqueRandom();
+      _sequenceStorage[_sequencePosition] = _currentRand;
       if (_sequencePosition++ > 2) {
-        resetSequence();
+        reset();
       }
-      
-      return rand - 1;
+      return _currentRand - 1;
     }
-
+    void reset() {
+      _sequenceStorage[0] = 0;
+      _sequenceStorage[1] = 0;
+      _sequenceStorage[2] = 0;
+      _sequencePosition = 0;
+    }
   private:
     long generateUniqueRandom() {
       long rand = random(1, 5);
@@ -63,19 +69,7 @@ class RandomProvider {
     }
 
     bool isDuplicate(long num) {
-      for (int i = 0; i < 3; i++) {
-        if (_sequenceStorage[i] == num) {
-          return true;
-        }
-      }
-      return false;
-    }
-
-    void resetSequence() {
-      _sequenceStorage[0] = 0;
-      _sequenceStorage[1] = 0;
-      _sequenceStorage[2] = 0;
-      _sequencePosition = 0;
+      return _sequenceStorage[0] == num || _sequenceStorage[1] == num || _sequenceStorage[2] == num || _previousRand == num;
     }
 };
 
@@ -199,7 +193,7 @@ class App {
     Timer _muTimer = Timer(false);
     Timer _muTimer2 = Timer(false);
     RandomProvider _randomProvider = RandomProvider();
-    int _fingerPins[2][4] = {
+    constexpr static int _fingerPins[2][4] = {
       { 
         LEFT_INDEX_FINGER_PIN,
         LEFT_MIDDLE_FINGER_PIN,
@@ -337,6 +331,7 @@ class App {
       if (_step >= _userSettings.offPeriodAmountOfSteps) {
         _isOnPeriod = true;
         _step = 0;
+        _randomProvider.reset();
       }
     }
     updateActivePins();
