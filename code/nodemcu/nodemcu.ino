@@ -40,21 +40,42 @@ class RandomProvider {
   private:
     int _sequencePosition = 0;
     long _sequenceStorage[3] = { 0, 0, 0 };
+
   public:
-    long getRandomNumber () {
-      long rand = random(1, 5);
-      if (_sequenceStorage[0] == rand || _sequenceStorage[1] == rand || _sequenceStorage[2] == rand) {
-        return getRandomNumber();
-      } else {
-        _sequenceStorage[_sequencePosition] = rand;
-        if (++_sequencePosition > 2) {
-          _sequenceStorage[0] = 0;
-          _sequenceStorage[1] = 0;
-          _sequenceStorage[2] = 0;
-          _sequencePosition = 0;
-        }
-        return rand - 1;
+    long getRandomNumber() {
+      long rand = generateUniqueRandom();
+      _sequenceStorage[_sequencePosition] = rand;
+      
+      if (_sequencePosition++ > 2) {
+        resetSequence();
       }
+      
+      return rand - 1;
+    }
+
+  private:
+    long generateUniqueRandom() {
+      long rand = random(1, 5);
+      while (isDuplicate(rand)) {
+        rand = random(1, 5);
+      }
+      return rand;
+    }
+
+    bool isDuplicate(long num) {
+      for (int i = 0; i < 3; i++) {
+        if (_sequenceStorage[i] == num) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    void resetSequence() {
+      _sequenceStorage[0] = 0;
+      _sequenceStorage[1] = 0;
+      _sequenceStorage[2] = 0;
+      _sequencePosition = 0;
     }
 };
 
