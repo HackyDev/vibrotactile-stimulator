@@ -6,15 +6,6 @@
 const char* ssid = "vtstim";  // Enter SSID here
 const char* password = "12345678";  // Enter Password here
 
-enum State {
-  NONE,
-  STEP,
-  VIBRATION,
-  PULSE_ON,
-  PULSE_OFF,
-  PAUSE
-};
-
 enum FingerPin {
   RIGHT_INDEX_FINGER_PIN = D3,
   RIGHT_MIDDLE_FINGER_PIN = D2,
@@ -23,7 +14,16 @@ enum FingerPin {
   LEFT_INDEX_FINGER_PIN = D7,
   LEFT_MIDDLE_FINGER_PIN = D6,
   LEFT_RING_FINGER_PIN = D5,
-  LEFT_LITTLE_FINGER_PIN = D4,
+  LEFT_LITTLE_FINGER_PIN = D4
+};
+
+enum State {
+  NONE,
+  STEP,
+  VIBRATION,
+  PULSE_ON,
+  PULSE_OFF,
+  PAUSE
 };
 
 struct UserSettings {
