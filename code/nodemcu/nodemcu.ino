@@ -207,7 +207,7 @@ class App {
         RIGHT_LITTLE_FINGER_PIN
       }
     };
-    int _fingerPinsReversed[2][4] = {
+    constexpr static int _fingerPinsReversed[2][4] = {
       { 
         LEFT_LITTLE_FINGER_PIN,
         LEFT_RING_FINGER_PIN,
